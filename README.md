@@ -43,6 +43,12 @@ services:
       - db
 ```
 
+# To verify mysql database
+make sure you have netcat installed in the container, or install it in your Dockerfile
+```
+RUN apt-get -q update && apt-get -qy install netcat
+```
+
 ## Testing
 
 Ironically testing is done using [bats](https://github.com/sstephenson/bats), which on the other hand is depending on [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
